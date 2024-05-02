@@ -1,72 +1,406 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Montserrat:wght@400;500;600&family=Poppins:ital,wght@0,300;0,400;0,600;1,500;1,700;1,800&display=swap');
 
-
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  width: 100%;
-  font-family: 'poppins', sans-serif;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
 
 }
 
-#navbar {
-  position: sticky;
-  top: 0;
-  background-color: rgb(88, 4, 255);
-  z-index: 10;
+hr {
+  width: 40px;
+  height: 3px;
+  background-color: rgb(252, 0, 7)
 }
 
-.bold {
-  font-size: 25px;
-  color: rgb(249, 249, 252);
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
-li {
-  padding: 5px;
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+
+
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #070606;
+
+}
+
+h6 {
+  color: #d8d8d8;
+}
+
+
+.btn {
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  background-color: #080808;
   color: white;
+  padding: 13px 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(235, 9, 9);
+  color: rgb(250, 246, 245);
+
 }
 
 .navbar {
-  border-radius: 4px;
+  font-size: 17px;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 3px 7px #09024d;
+  background: rgb(68, 141, 237);
+
+
 }
 
-.nav-link {
-  font-size: 20px;
-  font-weight: bold;
-  border: 2px solid transparent;
+.navbar-light .navbar-nav .nav-link {
+  padding: 0 20px;
+  color: rgb(12, 4, 4);
+  transition: 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar i:hover,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar i.active {
+  color: rgb(250, 244, 242);
+}
+
+.navbar i {
+  font-size: 1.2rem;
+  padding: 0 7px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+/* mobile nav */
+
+
+.navbar-toggler:focus {
+  box-shadow: none;
+
+}
+
+#bar {
+  font-size: 1.5rem;
+  padding: 7px;
+  cursor: pointer;
+  color: coral;
+
+}
+
+#bar:hover,
+#bar.active {
+  color: rgb(243, 112, 6);
+
+}
+
+@media only screen and (max-width:991px) {
+
+  body>nav>div>button:hover,
+  body>nav>div>button:focus {
+    background-color: #fafaff;
+  }
+
+  body>nav>div>button:hover #bar,
+  body>nav>div>button:focus #bar {
+    background-color: #fff;
+
+  }
+
+  #navbarSupportedContent>ul {
+    margin: 1rem;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  #navbarSupportedContent>ul>li:nth-child(n)>a {
+    padding: 10px 0;
+  }
+}
+
+
+#home span {
+  color: rgb(20, 3, 253);
+
+
+}
+
+#home {
+  background-image: url(./img/banner/pexels-andrea-piacquadio-3775602.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top 100px center;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  display: inline-flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  color: rgb(3, 3, 3);
+
+}
+
+/* protucts */
+
+.product {
+  cursor: pointer;
+  margin-bottom: 2rem;
+
+}
+
+.product,
+img {
+  transition: 0.3s all;
+}
+
+.product:hover img {
+  opacity: 0.7;
+}
+
+.product .buy-btn {
+  background-color: orangered;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 0.3s all;
+}
+
+.product:hover .buy-btn {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#banner {
+  background-image: url(img/banner/2.jpg);
+  width: 100%;
+  height: 60vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top 270px center;
+  background-attachment: fixed;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   color: white;
 }
 
-
-.nav-link:hover {
-  border-bottom: 2px solid rgb(165, 165, 168);
-  transition: .1s;
+#banner h4 {
+  color: #d8d8d8;
 }
 
-//Home Section
+#banner h1 {
+  color: #fff;
 
-section {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+#banner .btn {
+  background-color: rgb(255, 30, 0);
+}
+
+#banner .btn:hover {
+  background: #000;
+  color: white;
+}
+
+footer .copyright a {
+
+  color: rgb(39, 3, 245);
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  display: inline-block;
   align-items: center;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+footer .copyright a:hover {
+  color: #fff;
+  background-color: orangered;
 }
 
 
-.para1 {
-  font-size: 20px;
-  text-align: justify;
+[serverApp-c13] label[_ngcontent-serverApp-c13] {
+  width: 38px;
+  height: 38px;
+  border: 0 solid #cecece;
+  background: #fff;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+
+
+/* blog section */
+#blog-container .post .post-img {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#blog-container .post:hover img {
+  transform: scale(1.2) rotate(-10deg);
+  opacity: 0.9;
+}
+
+#blog-container .post img {
+  transition: 0.3s ease;
+}
+
+#blog-container .post:hover h3 {
+  color: rgb(252, 115, 4);
+}
+
+
+#blog-container .post h3 {
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+
+/* shopping card */
+
+#card-container {
+  overflow-x: auto;
+}
+
+
+
+#card-container table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+  white-space: nowrap;
 
 }
 
-span {
-  color: blue;
-  font-weight: bold;
+#card-container table thead {
+  font-weight: 700;
+}
+
+#card-container table thead td {
+  background-color: orangered;
+  color: #d8d8d8;
+  border: none;
+  padding: 6px 0;
+}
+
+#card-container table td {
+  border: 1px solid grey;
+  text-align: center;
 
 }
 
-#footer {
-  background-color: rgb(89, 86, 86);
-  border-radius: 5px;
+#card-container table td:nth-child(1) {
+  width: 100px;
+}
+
+#card-container table td:nth-child(2),
+#card-container table td:nth-child(3) {
+  width: 200px;
+}
+
+#card-container table td:nth-child(4),
+#card-container table td:nth-child(5),
+#card-container table td:nth-child(6) {
+  width: 170px;
+}
+
+#card-container table tbody img {
+  width: 100px;
+  height: 80px;
+  object-fit: cover;
+}
+
+#card-bottom .coupon>div {
+  border: 1px solid grey;
+
+}
+
+#card-bottom .coupon h5 {
+  background: orangered;
+  color: white;
+  border: none;
+  padding: 7px 0;
+
+}
+
+#card-bottom .coupon input {
+  padding: 2px;
+  margin: 12px;
+}
+
+#card-bottom .coupon>div,
+#card-bottom .total>div {
+  border: 1px solid grey;
+
+}
+
+#card-bottom .coupon h5,
+#card-bottom .total h3 {
+  background: orangered;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-weight: 700;
+
+}
+
+#card-bottom .total div>div {
+  padding: 0 12px;
+}
+
+#card-bottom .total h4 {
+  color: black;
+}
+
+.second-hr {
+  background: darkgrey;
+  width: 100%;
+  height: 2px;
+}
+
+#card-bottom .total div>button {
+  margin: 0 12px 20px 0;
+  display: flex;
+  justify-content: flex-end;
+
 }

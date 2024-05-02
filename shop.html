@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>E-commerce</title>
+  <title>E-Shop</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -13,18 +13,45 @@
 
   <link rel="stylesheet" href="style.css">
 
+  <style>
+    .product img {
+      width: 100%;
+      height: auto;
+      box-sizing: border-box;
+      object-fit: cover;
+    }
+
+    #featured>div.row.mx-auto.container>nav>ul>li.page-item.active>a {
+      background-color: black;
+
+
+    }
+
+    #featured>div.row.mx-auto.container>nav>ul>li:nth-child(n):hover>a {
+      background-color: coral;
+      color: white;
+    }
+
+    .pagination a {
+      color: black;
+
+    }
+  </style>
+
+
+
 </head>
+
 
 <body>
 
-  <!-- NAvigation bar-->
 
-  <nav class="navbar navbar-expand-lg navbar-light py-3  fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light  py-3 fixed-top">
     <div class="container">
 
-      <img src="./img/Screenshot_9-3-2024_21517_.jpeg" alt="jockey" width="80" style="border-radius: 50px;"
-        class="text-white">
-      <h1 class="card-title p-3 text-white">Abi Garments</h1>
+      <img src="https://cdn.iconscout.com/icon/free/png-256/free-jockey-underwear-3421576-2854257.png" alt="jockey"
+        width="50" class="text-white">
+      <h1 class="card-title p-3 text-white">JOCKEY</h1>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,13 +63,13 @@
 
 
           <li class="nav-item">
-            <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link " href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="shop.html">Shop</a>
+            <a class="nav-link active" href="#">Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="shop.html">Blog</a>
+            <a class="nav-link" href="blog.html">Blog</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About</a>
@@ -53,8 +80,7 @@
           <li class="nav-item">
           <li class="nav-item">
             <i class="fa-solid fa-magnifying-glass"></i>
-
-            <a href="payment.html"><i class="fa-solid fa-shopping-bag" style="color: white;"></i> </a>
+            <a href="payment.html"> <i class="fa-solid fa-shopping-bag" style="color: white;"></i> </a>
 
           </li>
           </li>
@@ -64,52 +90,77 @@
     </div>
   </nav>
 
-  <!--- first Section-->
 
-  <section id="home" class="pt-2">
-    <div class="container mt-3">
-      <h3 class="text-dark  text-end">NEW ARRIVALS</h3>
-      <h1 class="m-5 text-end me-2"> <span>Best Price</span> This Year</h1>
-
-      <p class="text-dark text-end fw-bold"> Offers your very comfortable time <br> on Walking and exercises</p>
-
-      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button class="btn btn-primary me-md-2" type="button">Shop Now</button>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- brand section-->
-
-  <section id="brand" class="container">
-    <div class="row m-0 py-5">
-
-      <img class="img-fluid col-lg-2 col-md-4 col-6" src="img/brand/1.png" alt="image">
-      <img class="img-fluid col-lg-2 col-md-4 col-6" src="img/brand/2.png" alt="">
-      <img class="img-fluid col-lg-2 col-md-4 col-6" src="img/brand/3.png" alt="">
-      <img class="img-fluid col-lg-2 col-md-4 col-6" src="img/brand/4.png" alt="">
-      <img class="img-fluid col-lg-2 col-md-4 col-6" src="img/brand/5.png" alt="">
-      <img class="img-fluid col-lg-2 col-md-4 col-6" src="img/brand/6.png" alt="">
-
-    </div>
-
-  </section>
-
-
-
-  <!-- our featured-->
-  <section id="featured" class="my-5 pb-5">
+  <section id="featured" class="my-5  py-5">
     <div class="container text-center mt-5 py-5">
-      <h3>Jockey Mens T-shirt</h3>
+      <h2 class="font-weight-bold">Jockey Mens T-shirt</h2>
       <hr class="mx-auto">
       <p>Here you can check out new products with fair price on rymo</p>
     </div>
 
     <div class="row mx-auto container-fluid">
+      <div onclick="window.location.href='shoppro.html'" class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid w-100 h-75" src="img/shop/1.jpg" alt="image">
+        <div class="star pb-4  ps-4">
+          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+        </div>
+        <h5 class="p-name">Shirt </h5>
+        <h4 class="p-price">$139.00</h4>
+        <button class="btn buy-btn">Buy Now</button>
+      </div>
+
+      <div onclick="window.location.href='shoppro.html'" class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3"
+          src="https://static05.jockey.in/c_scale,h_640,w_480/jockey/uploads/dealimages/10085/originalimages/black-t-shirt-mv02-38.jpg">
+        <div class="star pb-3  ps-3">
+          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+        </div>
+        <h5 class="p-name">jockey MV02</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="btn buy-btn">Buy Now</button>
+      </div>
+
+      <div onclick="window.location.href='shoppro.html'" class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3"
+          src="https://static05.jockey.in/c_scale,h_640,w_480/jockey/uploads/dealimages/10092/originalimages/navy-melange-t-shirt-mv05-17.jpg"
+          alt="">
+        <div class="star pb-3  ps-3">
+          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+        </div>
+        <h5 class="p-name">jockey MV02</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="btn buy-btn">Buy Now</button>
+      </div>
+
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3"
+          src="https://img.tatacliq.com/images/i7/437Wx649H/MP000000011172035_437Wx649H_202111161535591.jpeg" alt="">
+        <div class="star pb-3  ps-3">
+          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+        </div>
+        <h5 class="p-name">Sport Boots</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="btn buy-btn">Buy Now</button>
+      </div>
+
+
       <div class="product text-center col-lg-3 col-md-4 col-12">
         <img class="img-fluid mb-3"
           src="https://img.tatacliq.com/images/i7/437Wx649H/MP000000011172006_437Wx649H_202111161535081.jpeg" alt="">
@@ -169,227 +220,214 @@
         <h4 class="p-price">$92.00</h4>
         <button class="btn buy-btn">Buy Now</button>
       </div>
+
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3"
+          src="https://img.tatacliq.com/images/i7/437Wx649H/MP000000011172006_437Wx649H_202111161535081.jpeg" alt="">
+        <div class="star pb-3  ps-3">
+          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+        </div>
+        <h5 class="p-name">jockey MV02</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="btn buy-btn">Buy Now</button>
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3"
+          src="https://img.tatacliq.com/images/i7/437Wx649H/MP000000011172013_437Wx649H_202111161535183.jpeg">
+        <div class="star pb-3  ps-3">
+          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+        </div>
+        <h5 class="p-name">jockey MV02</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="btn buy-btn">Buy Now</button>
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/71wa2+DwRTL.jpg" alt="">
+        <div class="star pb-3  ps-3">
+          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+        </div>
+        <h5 class="p-name">jockey MV02</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="btn buy-btn">Buy Now</button>
+      </div>
+
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3"
+          src="https://img.tatacliq.com/images/i7/437Wx649H/MP000000011172035_437Wx649H_202111161535591.jpeg" alt="">
+        <div class="star pb-3  ps-3">
+          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+        </div>
+        <h5 class="p-name">Sport Boots</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="btn buy-btn">Buy Now</button>
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3"
+          src="https://img.tatacliq.com/images/i7/437Wx649H/MP000000011172006_437Wx649H_202111161535081.jpeg" alt="">
+        <div class="star pb-3  ps-3">
+          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+        </div>
+        <h5 class="p-name">jockey MV02</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="btn buy-btn">Buy Now</button>
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3"
+          src="https://img.tatacliq.com/images/i7/437Wx649H/MP000000011172013_437Wx649H_202111161535183.jpeg">
+        <div class="star pb-3  ps-3">
+          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+        </div>
+        <h5 class="p-name">jockey MV02</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="btn buy-btn">Buy Now</button>
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/71wa2+DwRTL.jpg" alt="">
+        <div class="star pb-3  ps-3">
+          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+        </div>
+        <h5 class="p-name">jockey MV02</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="btn buy-btn">Buy Now</button>
+      </div>
+
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3"
+          src="https://img.tatacliq.com/images/i7/437Wx649H/MP000000011172035_437Wx649H_202111161535591.jpeg" alt="">
+        <div class="star pb-3  ps-3">
+          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+        </div>
+        <h5 class="p-name">Sport Boots</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="btn buy-btn">Buy Now</button>
+      </div>
+
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3"
+          src="https://img.tatacliq.com/images/i7/437Wx649H/MP000000011172006_437Wx649H_202111161535081.jpeg" alt="">
+        <div class="star pb-3  ps-3">
+          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+        </div>
+        <h5 class="p-name">jockey MV02</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="btn buy-btn">Buy Now</button>
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3"
+          src="https://img.tatacliq.com/images/i7/437Wx649H/MP000000011172013_437Wx649H_202111161535183.jpeg">
+        <div class="star pb-3  ps-3">
+          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+        </div>
+        <h5 class="p-name">jockey MV02</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="btn buy-btn">Buy Now</button>
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="https://m.media-amazon.com/images/I/71wa2+DwRTL.jpg" alt="">
+        <div class="star pb-3  ps-3">
+          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+        </div>
+        <h5 class="p-name">jockey MV02</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="btn buy-btn">Buy Now</button>
+      </div>
+
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3"
+          src="https://img.tatacliq.com/images/i7/437Wx649H/MP000000011172035_437Wx649H_202111161535591.jpeg" alt="">
+        <div class="star pb-3  ps-3">
+          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+          <i class="fa-solid fa-star" style="color: yellow;"></i>
+        </div>
+        <h5 class="p-name">Sport Boots</h5>
+        <h4 class="p-price">$92.00</h4>
+        <button class="btn buy-btn">Buy Now</button>
+      </div>
+
+      <nav aria-label="...">
+        <ul class="pagination mt-5">
+          <li class="page-item disabled">
+            <span class="page-link">Previous</span>
+          </li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item " aria-current="page">
+            <span class="page-link">2</span>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+
     </div>
   </section>
 
 
-  <!-- banner-->
-
-  <section id="banner" class="my-5 py-5">
-    <div class="container">
-      <h4>MID SEASON SALE</h4>
-      <h1>Autumn Collection UP TO 20% OFF</h1>
-      <button class="btn text-uppercase">shop Now</button>
-
-    </div>
-
-  </section>
 
 
-  <section id="cloths" class="my-5">
-    <div class="container text-center mt-5 py-5">
-      <h3>Dresses &Jumpsuits</h3>
-      <hr class="mx-auto">
-      <p>Here you can check out new products with fair price on rymo</p>
-    </div>
-
-    <div class="row mx-auto container-fluid">
-      <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="img/clothes/1.jpg" alt="">
-        <div class="star pb-3  ps-3">
-          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-        </div>
-        <h5 class="p-name">Sport Boots</h5>
-        <h4 class="p-price">$92.00</h4>
-        <button class="btn buy-btn">Buy Now</button>
-      </div>
-
-      <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="img/clothes/2.jpg" alt="">
-        <div class="star pb-3  ps-3">
-          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-        </div>
-        <h5 class="p-name">Sport Boots</h5>
-        <h4 class="p-price">$92.00</h4>
-        <button class="btn buy-btn">Buy Now</button>
-      </div>
-
-      <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="img/clothes/3.jpg" alt="">
-        <div class="star pb-3  ps-3">
-          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-        </div>
-        <h5 class="p-name">Sport Boots</h5>
-        <h4 class="p-price">$92.00</h4>
-        <button class="btn buy-btn">Buy Now</button>
-      </div>
-
-
-      <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid card-img mb-3" src="img/black-t-shirt-a144-9.jpg" style="max-width: 100%;
-        height: 64.5%;" alt="">
-        <div class="star pb-3  ps-3">
-          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-        </div>
-        <h5 class="p-name">Sport Boots</h5>
-        <h4 class="p-price">$92.00</h4>
-        <button class="btn buy-btn">Buy Now</button>
-      </div>
-    </div>
-  </section>
-
-
-  <section id="watches" class="my-5 pb-5">
-    <div class="container text-center mt-5 py-5">
-      <h3>Best watches</h3>
-      <hr class="mx-auto">
-      <p>Here you can check out new products with fair price on rymo</p>
-    </div>
-
-    <div class="row mx-auto container-fluid">
-      <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="img/watches/1.jpg" alt="">
-        <div class="star pb-3  ps-3">
-          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-        </div>
-        <h5 class="p-name">Sport Boots</h5>
-        <h4 class="p-price">$92.00</h4>
-        <button class="btn buy-btn">Buy Now</button>
-      </div>
-
-      <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="img/watches/2.jpg" alt="">
-        <div class="star pb-3  ps-3">
-          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-        </div>
-        <h5 class="p-name">Sport Boots</h5>
-        <h4 class="p-price">$92.00</h4>
-        <button class="btn buy-btn">Buy Now</button>
-      </div>
-
-      <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="img/watches/3.jpg" alt="">
-        <div class="star pb-3  ps-3">
-          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-        </div>
-        <h5 class="p-name">Sport Boots</h5>
-        <h4 class="p-price">$92.00</h4>
-        <button class="btn buy-btn">Buy Now</button>
-      </div>
-
-
-      <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="img/watches/4.jpg" alt="">
-        <div class="star pb-3  ps-3">
-          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-        </div>
-        <h5 class="p-name">Sport Boots</h5>
-        <h4 class="p-price">$92.00</h4>
-        <button class="btn buy-btn">Buy Now</button>
-      </div>
-    </div>
-  </section>
-
-  <section id="shoes" class="my-5 pb-5">
-    <div class="container text-center mt-5 py-5">
-      <h3>Running Shoes</h3>
-      <hr class="mx-auto">
-      <p>Here you can check out new products with fair price on rymo</p>
-    </div>
-
-    <div class="row mx-auto container-fluid">
-      <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="img/shoes/1.jpg" alt="">
-        <div class="star pb-3  ps-3">
-          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-        </div>
-        <h5 class="p-name">Sport Boots</h5>
-        <h4 class="p-price">$92.00</h4>
-        <button class="btn buy-btn">Buy Now</button>
-      </div>
-
-      <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="img/shoes/2.jpg" alt="">
-        <div class="star pb-3  ps-3">
-          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-        </div>
-        <h5 class="p-name">Sport Boots</h5>
-        <h4 class="p-price">$92.00</h4>
-        <button class="btn buy-btn">Buy Now</button>
-      </div>
-
-      <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="img/shoes/3.jpg" alt="">
-        <div class="star pb-3  ps-3">
-          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-        </div>
-        <h5 class="p-name">Sport Boots</h5>
-        <h4 class="p-price">$92.00</h4>
-        <button class="btn buy-btn">Buy Now</button>
-      </div>
-
-
-      <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="img/shoes/4.jpg" alt="">
-        <div class="star pb-3  ps-3">
-          <i class="fa-solid fa-star" style="color: rgba(235, 231, 33, 0.945);"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-          <i class="fa-solid fa-star" style="color: yellow;"></i>
-        </div>
-        <h5 class="p-name">Sport Boots</h5>
-        <h4 class="p-price">$92.00</h4>
-        <button class="btn buy-btn">Buy Now</button>
-      </div>
-    </div>
-  </section>
 
   <!-- footer section-->
+
   <footer class="mt-5 py-5 bg-dark text-white">
     <div class="row container mx-auto pt-5">
       <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
@@ -462,6 +500,18 @@
       </div>
     </div>
   </footer>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
